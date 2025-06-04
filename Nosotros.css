@@ -1,0 +1,431 @@
+/* Basic Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Reusable Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #004080; /* A dark blue from the logo/design */
+    text-transform: uppercase;
+}
+
+.section-title-left {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #004080; /* A dark blue from the logo/design */
+    text-transform: uppercase;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Reusable Button */
+.btn-primary {
+    background-color: #007bff; /* Example button color, adjust if needed */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* For anchor tags styled as buttons */
+    display: inline-block; /* Allows padding and margin */
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* White background as seen in image */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Make navbar sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.navbar .nav-menu ul {
+    list-style: none;
+    display: flex; /* For horizontal navigation */
+}
+
+.navbar .nav-menu ul li {
+    margin-left: 25px;
+}
+
+.navbar .nav-menu ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-menu ul li a:hover {
+    color: #004080; /* Blue from the logo */
+}
+
+.hamburger-menu {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Hero Section - Main image (camion-pallets-hero.jpg) */
+.hero-image-section {
+    width: 100%;
+    height: 60vh; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* NOSOTROS (About Us) Section */
+.about-us-section {
+    padding-bottom: 50px; /* Adjust padding for spacing */
+    background-color: #ffffff;
+}
+
+.about-us-team-image {
+    width: 100%;
+    height: 50vh; /* Adjust height as seen in image */
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.about-us-team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.about-us-content {
+    text-align: center;
+}
+
+.about-us-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Section Grid Layout (for Productos, Nuestra Planta, Certificaciones) */
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 50px; /* Space between image and content */
+    align-items: center; /* Vertically align content */
+    padding: 50px 0; /* Padding for each section */
+}
+
+.section-grid.reverse-grid {
+    grid-template-columns: 1fr 1fr; /* Default */
+}
+
+.section-grid.reverse-grid .grid-image {
+    order: 2; /* Image on right */
+}
+
+.section-grid.reverse-grid .grid-content {
+    order: 1; /* Content on left */
+}
+
+.section-grid .grid-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit height of section images */
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.section-grid .grid-content {
+    padding: 0 20px; /* Padding inside content column */
+}
+
+.section-grid .grid-content p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05em;
+}
+
+/* Specific section backgrounds/padding */
+.products-section {
+    background-color: #f0f4f7; /* Light grey/blue background */
+}
+
+.our-plant-section {
+    background-color: #ffffff;
+}
+
+.certifications-section {
+    background-color: #f0f4f7;
+    margin-bottom: 40px; /* Space before footer */
+}
+
+/* Photo Gallery Section (from previous iteration) */
+.gallery-section {
+    padding: 40px 0;
+    background-color: #ffffff; /* White background */
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area */
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.main-footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #444;
+}
+
+.main-footer .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #eee;
+}
+
+.main-footer .footer-column ul {
+    list-style: none;
+}
+
+.main-footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-column ul li a:hover {
+    color: #fff;
+}
+
+.main-footer .contact-info p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.main-footer .contact-info a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .contact-info a:hover {
+    color: #fff;
+}
+
+.main-footer .footer-logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: invert(1);
+    opacity: 0.7;
+}
+
+.main-footer .copyright {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .nav-menu.active {
+        display: flex;
+    }
+
+    .navbar .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .navbar .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .hero-image-section {
+        height: 40vh;
+    }
+
+    .about-us-team-image {
+        height: 30vh; /* Adjust height for smaller screens */
+    }
+
+    .about-us-content p {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+    .section-title-left {
+        font-size: 1.6em;
+        text-align: center; /* Center titles on small screens */
+    }
+
+
+    /* Section Grid for smaller screens (Productos, Nuestra Planta, Certificaciones) */
+    .section-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        gap: 30px;
+    }
+
+    .section-grid .grid-image {
+        order: initial !important; /* Reset order to default */
+    }
+
+    .section-grid .grid-content {
+        padding: 0 15px; /* Adjust padding */
+        text-align: center; /* Center content text */
+    }
+
+    .btn-primary {
+        margin-top: 15px; /* Adjust button margin */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .main-footer .footer-grid {
+        grid-template-columns: 1fr; /* Stack footer columns */
+        text-align: center;
+    }
+
+    .main-footer .footer-logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    .navbar .nav-menu ul li {
+        margin-left: 15px;
+    }
+
+    .section-grid {
+        gap: 30px; /* Reduce gap on tablets */
+    }
+
+    .section-grid .grid-image img {
+        max-height: 300px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
