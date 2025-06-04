@@ -1,0 +1,278 @@
+/* Basic Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff; /* White background */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* White background as seen in image */
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Make navbar sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust logo size */
+}
+
+.navbar .nav-menu ul {
+    list-style: none;
+    display: flex; /* For horizontal navigation */
+}
+
+.navbar .nav-menu ul li {
+    margin-left: 25px;
+}
+
+.navbar .nav-menu ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-menu ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.hamburger-menu {
+    display: none; /* Hidden by default on larger screens */
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* Hero Section - Main image from the second picture */
+.hero-image-section {
+    width: 100%;
+    height: 60vh; /* Adjust as needed */
+    overflow: hidden; /* Ensure image doesn't overflow */
+    margin-top: 0; /* Remove top margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+    display: block;
+}
+
+
+/* Company Description Section */
+.about-company-section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center; /* As seen in the image, text is centered */
+}
+
+.about-company-section p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 800px; /* Limit text width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Photo Gallery Section */
+.gallery-section {
+    padding: 40px 0;
+    background-color: #f8f8f8; /* Slightly different background for visual separation */
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area */
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 10px; /* Adjust padding for copyright */
+}
+
+.main-footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #444; /* Separator above copyright */
+}
+
+.main-footer .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #eee;
+}
+
+.main-footer .footer-column ul {
+    list-style: none;
+}
+
+.main-footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.main-footer .footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.main-footer .footer-column ul li a:hover {
+    color: #fff;
+}
+
+.main-footer .contact-info p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.main-footer .contact-info a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-footer .contact-info a:hover {
+    color: #fff;
+}
+
+.main-footer .footer-logo img {
+    max-width: 150px; /* Adjust footer logo size */
+    height: auto;
+    display: block;
+    margin-left: auto; /* Center logo in its column */
+    margin-right: auto;
+    filter: invert(1); /* If logo is dark, make it light for dark background */
+    opacity: 0.7;
+}
+
+.main-footer .copyright {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+    .navbar .nav-menu {
+        display: none; /* Hide regular menu */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .nav-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    .navbar .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .navbar .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+    }
+
+    .hero-image-section {
+        height: 40vh; /* Adjust height for smaller screens */
+    }
+
+    .about-company-section p {
+        font-size: 1em;
+        padding: 0 15px; /* Add horizontal padding for smaller screens */
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .main-footer .footer-grid {
+        grid-template-columns: 1fr; /* Stack footer columns */
+        text-align: center;
+    }
+
+    .main-footer .footer-logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    .navbar .nav-menu ul li {
+        margin-left: 15px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjust grid for tablets */
+    }
+}
