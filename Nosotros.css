@@ -16,7 +16,7 @@ body {
     width: 90%;
     max-width: 1200px; /* Adjust as needed */
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 /* Reusable Section Titles */
@@ -59,7 +59,7 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #004080;
 }
 
 /* Navbar */
@@ -79,7 +79,7 @@ body {
 }
 
 .navbar .logo img {
-    height: 40px; /* Adjust logo size */
+    height: 80px; /* Adjust logo size */
 }
 
 .navbar .nav-menu ul {
@@ -252,7 +252,7 @@ body {
 
 /* Footer */
 .main-footer {
-    background-color: #333;
+    background-color: #014894;
     color: white;
     padding-top: 40px;
     padding-bottom: 10px;
@@ -319,7 +319,7 @@ body {
     text-align: center;
     padding-top: 15px;
     font-size: 0.9em;
-    color: #aaa;
+    color: white;
 }
 
 /* Media Queries for Responsiveness */

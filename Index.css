@@ -16,7 +16,7 @@ body {
     width: 90%;
     max-width: 1300px; /* Adjust as needed */
     margin: 0 auto;
-    padding: 25px 0;
+    padding: 10px 0;
 }
 
 /* Navbar */
@@ -33,7 +33,7 @@ body {
 }
 
 .navbar .logo img {
-    height: 40px; /* Adjust logo size */
+    height: 80px; /* Adjust logo size */
 }
 
 .navbar .nav-menu ul {
@@ -54,7 +54,7 @@ body {
 }
 
 .navbar .nav-menu ul li a:hover {
-    color: #007bff; /* Example hover color */
+    color: #004080; /* Example hover color */
 }
 
 .hamburger-menu {
@@ -109,15 +109,15 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #004080;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #004080;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 15px 0;
     font-size: 0.9em;
 }
 
